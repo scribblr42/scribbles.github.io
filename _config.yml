@@ -1,2 +1,3 @@
 name: Ravi Mistry
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
