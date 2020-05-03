@@ -1,8 +1,11 @@
 ---
 layout: default
-title: Scribbles
+title: Ravi's Blog
 ---
-<div class="blurb">
-	<h3>Scribbles</h3>
-	<h6>Welcome to my blog! It's under construction at the moment, so please do bear with me. I'm trying to figure out what works best in this format, and let's see if it works out in the end.</h>
-</div><!-- /.blurb -->
+	<h1>{{ page.title }}</h1>
+	<ul class="posts">
+
+	  {% for post in site.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
