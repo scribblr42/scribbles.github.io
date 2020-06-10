@@ -5,8 +5,8 @@ date: 2020-06-10
 tags: personal musings
 ---
 
-[Photo by Mudassir Ali on Unsplash](/assets/mudassir-ali-hY3sn--SgwM-unsplash.jpg =252.2x315.2)
-Format: [Photo by Mudassir Ali on Unsplash]
+![Photo by Mudassir Ali on Unsplash](/assets/mudassir-ali-hY3sn--SgwM-unsplash.jpg =252.2x315.2)
+Format: ![Photo by Mudassir Ali on Unsplash]
 
 I've always been into cricket. Growing up in an Indian household, learning Gujarati as my first language, and idolising the Indian National Cricket team was just a part of life. A phrase my uncle often used for going home, was "heading back to the pavilion" - to head back to home base, to regroup. And this post is the almost the walk back from the field of play, back to the pavilion - to collect my thoughts, to think things through - before heading out for the next innings.
 
