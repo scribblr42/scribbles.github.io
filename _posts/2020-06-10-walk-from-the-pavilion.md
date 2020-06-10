@@ -27,7 +27,7 @@ My career so far has been, as I mentioned above, blessed. To join such a great c
 
 Nothing along my journey would have been possible without understanding myself, without turning up, or (most importantly) without the advice/support of my mentors, friends and (most importantly) family. 
 
-## Beyond fanalytics - look, Ma... no hands ##
+## Beyond fanalytics, walking to the wicket##
 Last week I started my new role - working in the Global Football department at City Football Group, building out the Football Intelligence practice to enable practitioners across the globe to use data and insights. I truly enjoyed, valued and could see myself in my previous role working in Customer Success with The Information Lab for a few years more - but this opportunity presented itself as a unique, virtually perfect stepping stone. The intersection between a strategic approach to data and analytics, to educating and enabling visual best practice and working in the beautiful game - a dream for those (like me) who have little to no athletic ability.
 
 What the future holds is building on the great work already done at CFG. Enabling folks across the organisation, using the skills learned as a consultant, a trainer and as part of Customer Success - and evangelising about data and analytics. How can we build a truly data-driven football organisation spanning across the world?
