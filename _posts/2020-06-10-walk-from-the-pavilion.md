@@ -2,6 +2,7 @@
 layout: post
 title: "The walk from the pavilion."
 date: 2020-06-10
+tags: personal musings
 ---
 
 # The walk from the pavilion #
