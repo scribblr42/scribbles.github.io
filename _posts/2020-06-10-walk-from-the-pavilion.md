@@ -9,12 +9,12 @@ I've always been into cricket. Growing up in an Indian household, learning Gujar
 
 I've been immensely lucky in my career so far. I studied Economics at Plymouth University, where I got a 2:1 through (in effect) gaming the grading system... but the two things which shaped a lot of my thinking in those years:
 
-	1. Taking a placement year between my second and third year of university, where I worked for BASF, the chemical company.
-	2. Realising during this year that I could work between 9-5 and have so much free time in the evenings. This changed a lot of my mindset.
+1. Taking a placement year between my second and third year of university, where I worked for BASF, the chemical company.
+2. Realising during this year that I could work between 9-5 and have so much free time in the evenings. This changed a lot of my mindset.
 
 During my year at BASF, I met a lot of folks who were helpful to help shape my mindset. One quote from a director, during an 'exit chat' I had during my final weeks was simple...
 
-	> life is about luck, and opportunity - and you make your own luck.
+`life is about luck, and opportunity - and you make your own luck.`
 
 This never really resonated with me until I started to tell and re-tell my journey to my first job out of university, to be a Trainee Consulting Analyst at The Information Lab's Data School. Through following and then becoming a part of a growing football/soccer analytics community, and the series of accidents which lead me to finding out about the role I'd end up doing. When I've mentioned this to mentors, they've often reflected that being a part of something that I was passionate about - and taking action on that interest - was how I really ended up there.	
 
