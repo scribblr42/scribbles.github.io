@@ -1,3 +1,4 @@
+<small>
 {% if post.layout != post %}
   {% assign words = post.content | strip_html | number_of_words %}
   {% if words < 180 %}
@@ -19,3 +20,4 @@
     {{ words | divided_by:180 }} minute read
   {% endif %}
 {% endif %}
+</small>
