@@ -7,7 +7,7 @@ title: Scribbles
 
 	  {% for post in site.posts %}
 	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-		<mark><small><small>{% include read-time.html %}</small></small></mark>
+		<span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
 		<br></br>
 	{% endfor %}
 	</ul>
