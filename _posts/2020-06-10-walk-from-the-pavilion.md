@@ -14,7 +14,7 @@ I've been immensely lucky in my career so far. I studied Economics at Plymouth U
 
 During my year at BASF, I met a lot of folks who were helpful to help shape my mindset. One quote from a director, during an 'exit chat' I had during my final weeks was simple...
 
-####`life is about luck, and opportunity - and you make your own luck.`
+#### `life is about luck, and opportunity - and you make your own luck.`
 
 This never really resonated with me until I started to tell and re-tell my journey to my first job out of university, to be a Trainee Consulting Analyst at The Information Lab's Data School. Through following and then becoming a part of a growing football/soccer analytics community, and the series of accidents which lead me to finding out about the role I'd end up doing. When I've mentioned this to mentors, they've often reflected that being a part of something that I was passionate about - and taking action on that interest - was how I really ended up there.	
 
