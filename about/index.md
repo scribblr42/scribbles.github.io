@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scribbles
+title: Scribbles | About me
 ---
 # Hi, I'm Ravi
 ## Tableau Zen Master + Ambassador, Data Visualisation Specialist
