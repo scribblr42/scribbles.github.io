@@ -8,10 +8,10 @@ date: 2020-06-10
 I've always been into cricket. Growing up in an Indian household, learning Gujarati as my first language, and idolising the Indian National Cricket team was just a part of life. A phrase my uncle often used for going home, was "heading back to the pavilion" - to head back to home base, to regroup. And this post is the almost the walk back from the field of play, back to the pavilion - to collect my thoughts, to think things through - before heading out for the next innings.
 
 I've been immensely lucky in my career so far. I studied Economics at Plymouth University, where I got a 2:1 through (in effect) gaming the grading system... but the two things which shaped a lot of my thinking in those years:
-
+```
 1. Taking a placement year between my second and third year of university, where I worked for BASF, the chemical company.
 2. Realising during this year that I could work between 9-5 and have so much free time in the evenings. This changed a lot of my mindset.
-
+```
 During my year at BASF, I met a lot of folks who were helpful to help shape my mindset. One quote from a director, during an 'exit chat' I had during my final weeks was simple...
 
 `life is about luck, and opportunity - and you make your own luck.`
