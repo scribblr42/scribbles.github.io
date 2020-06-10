@@ -5,3 +5,4 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Scribblr_42
 github_username:  scribblr42
 theme: minima
+google_analytics: UA-169163810-1
