@@ -2,6 +2,7 @@
 layout: post
 title: "Project Griffon: Getting started with the Postgres repository"
 date: 2020-06-12
+tags: project-griffon tableau tableau-server
 ---
 
 # Working with the Tableau Postgres Repository
@@ -14,7 +15,7 @@ This is all stored in a Postgres (a type of database) which is installed automat
 
 ### How to use the Postgres repository
 
-The humble user (us) can access this information through the 'readonly' user - which allows you to access and 'read' the information from Tableau Server. This is a feature which is not turned on by default. This post](https://help.tableau.com/current/server/en-us/perf_collect_server_repo.htm) highlights how to turn this feature on. So this is the first step to using Tableau and the Repository. If this feature is already turned on, you will need the password for to connect to Tableau.
+The humble user (us) can access this information through the 'readonly' user - which allows you to access and 'read' the information from Tableau Server. This is a feature which is not turned on by default. [This post] (https://help.tableau.com/current/server/en-us/perf_collect_server_repo.htm) highlights how to turn this feature on. So this is the first step to using Tableau and the Repository. If this feature is already turned on, you will need the password for to connect to Tableau.
 
 #### Useful caveats
 Here are a few nuggets of handy supporting information that will help support you & your organisation's work with the repository.
