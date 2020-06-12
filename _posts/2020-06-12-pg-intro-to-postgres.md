@@ -5,7 +5,7 @@ date: 2020-06-12
 tags: project-griffon tableau tableau-server
 ---
 
-# Working with the Tableau Postgres Repository
+## Working with the Tableau Postgres Repository
 
 ### What is the Tableau Repository?
 
