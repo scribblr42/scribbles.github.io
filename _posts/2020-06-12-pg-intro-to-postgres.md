@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Project Griffon: Getting started with the Postgres repository"
-date: yyyy-mm-dd
+date: 2020-06-12
 ---
 
 # Working with the Tableau Postgres Repository
