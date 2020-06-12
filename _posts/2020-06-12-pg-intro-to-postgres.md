@@ -29,7 +29,7 @@ Here are a few nuggets of handy supporting information that will help support yo
 
 **Tableau Online:**
 If you are a user of Tableau Online, unfortunately you are not able to roll your own data sources. But! Fear not. 
-There are [Admin Insights](https://help.tableau.com/current/online/en-us/adminview_insights_manage.htm) you can use to build out visualisations. You are able to get access to TS User, TS Events and TS Web Requests. Handy-ish, but better than nothing.
+There are [Admin Insights](https://help.tableau.com/current/online/en-us/adminview_insights_manage.htm) you can use to build out visualisations. You are able to get access to TS User, TS Events and TS Web Requests (in beta currently [june 2020] - available using the [Early Feedback](https://prerelease.tableau.com/key/online_admin))  . Handy-ish, but better than nothing.
 
 
 ### Before you start building things
