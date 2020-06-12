@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "Project Griffon: Getting started with the Postgres repository"
+title: "Project Griffon: Getting started with the Tableau Postgres repository"
 date: 2020-06-12
 tags: project-griffon tableau tableau-server
 ---
 
-## Working with the Tableau Postgres Repository
+![Project Griffon logo on blue background](/assets/project-griffon.png)
+
+_With Project Griffon, we want to share examples and started with you – the Tableau Community. The objective here is to share tools which use what you have in front of you to help explain more about what’s going on. Please be sure to read the [introduction to Project Griffon](https://www.theinformationlab.co.uk/2018/10/30/introducing-project-griffon/)_
+
 
 ### What is the Tableau Repository?
 
