@@ -1,8 +1,9 @@
 name: Ravi Mistry
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://scribblr42.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Scribblr_42
 github_username:  scribblr42
 theme: minima
 google_analytics: UA-169163810-1
+description:  Thoughts, musings & tutorials on all things football, analytics, data, visualisation and Tableau.
