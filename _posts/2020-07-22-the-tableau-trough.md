@@ -51,8 +51,13 @@ I've mentioned a few things that an organisation can do, but here's what I share
 So, imagine if Tableau could...
 
 - Nudge you in the right direction with passive ideas or tricks. I'm not thinking tip of the day, but more 'worked' examples of different features within the product.
-- Showed you new features since your previously installed version (ie. "Here's Set Controls! This is how it could help you, and let's work through an example together"). I feel in-product tutorials would massively support the usage and understanding.
+
+- Showed you new features since your previously installed version (ie. "Here's Set Controls! This is how it could help you, and let's work through an example together"). I feel in-product tutorials would massively support the usage and understanding. Imagine if you could have a pop-up when you open the Calculated Field window, nudging you to pop open the right hand panel (please make this open by default @Tableau) and see new functions.. Or new buttons in the Dashboard fiew. Even nudges like a 'new' star before first use would be neat. Behavioural nudges, innit.
+
 - Education on understanding how Tableau takes in data sets. Fundamentals such as green things/blue things, dimensions/measures and long/thing vs short/wide are easy to 'assume' as tacit knowledge, but small nudges remind users of what happens when things are working through the canvas. 
+
+
+The best examples I can think of built in tutorials are, well, games. In order to learn a new move, or understand game play, the user must complete tasks to see it in action. For example, think about learning to use buttons to do combinations, or the heads-up display nudging the player to do something. There are concepts like this in other areas which can be used by both organisations and developers - thought developers almost certainly are aware of these concepts!
 
 It's funny — in some ways, you want our old pal Clippy from Microsoft ("I think you're trying to write a resume! Can I help?") but in reality the magic comes from the Tableau flavour of this. What if Tableau could have a non-intrusive suggestions engine - I think something like this was demonstrated where suggested Sheets/Dashboards from Tableau Server would pop up.
 
