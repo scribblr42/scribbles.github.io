@@ -37,6 +37,9 @@ The 'basic' answer you may hear is "invest in people" — this is all well and g
 
 I think there is value in contextualised learning in this case — this is where the value of a Tableau specialist comes handy, to act as a translator between the industry specific knowledge and empowering users to understand the tool they have in front of them. Because ultimately this is what the education is — to share, empower and enable people to understand the options and choices they have, before they move forward with their analysis.
 
+### Using Tableau in Anger
+Another factor to this is using Tableau in anger, which is where the frustration can stem from - but also this is a relevant method of learning. In situations where Tableau is a tool forced or recommended to an individual, it can be annoying to have to unlearn one tool and translate to this new one. So instead of investing time to understand the tool, the user will spend time finding out simply how to get from A to B... Which is sat-nav BI, versus iterative, exploratory BI - Tableau's sweet spot. Ultimately, this is OK - but the Trough will arrive quicker. The users won't understand the terms used to search, the user will ultimately get frustrated and revert back to what's comfortable.
+
 So for a user, they're still reliant on people. Either a person to invest in their education, learning and development (with the onus on this user to translate this back to their own use case), or reliant on another user or group of users (a centre of excellence, community of practice or external consultancy) to be that educator for them... where there is still an onus on the user to translate their own business knowledge to the application. And I think the application of business knowledge of course must be a part of the process, and isn't something to be spoon-fed. But that there is some level of support required to attack, consider and conquer the Tableau Trough is absolutely true.
 
 
