@@ -7,7 +7,7 @@ tags: tableau tableau-blueprint tableau-trough
 
 I was lucky enough to be in Seattle in February, before the global pandemic hit. It was my first time in the Pacific North-West, and perhaps the highlight of the trip was my second week there. From Monday to Thursday, I was able to spend time with the good folks who build Tableau - The Developers.
 
-As an aside, if you're reading this post and wondering — how can I get in touch with these folks? They don't bite. I myself decided about 2-3 years ago that I was never going to become a Zen Master, and did want to speak to developers more... So I just did. These folks are awesome, a delight to spend time with and are always fascinated to hear what every single type of user is thinking when it comes to Tableau. You can find a few of them on Tableau, feel free to tag a few folks from the Tableau Twitter community who will point you in the right direction. 
+As an aside, if you're reading this post and wondering — how can I get in touch with these folks? They don't bite. I myself decided about 2-3 years ago that I was never going to become a Zen Master, and did want to speak to developers more... So I just did. These folks are awesome, a delight to spend time with and are always fascinated to hear what every single type of user is thinking when it comes to Tableau. You can find a few of them on Twitter, feel free to tag a few folks from the Tableau Twitter community who will point you in the right direction. 
 
 Amongst the activities I had planned, I talked about a few things on a regular basis. First was the Profile layer (which I want to write about in another post) and the second was the Tableau Trough.
 
