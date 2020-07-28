@@ -78,6 +78,11 @@ The Profile Layer can help to identify not just different types of users, but wh
 
 What if this was one step further? What if the Profile Layer was able to scan workbooks for feature usage, especially post upgrade or after training. Or even each action - to help nudge a super user to help with a calculated field? In my post about the Tableau Trough, I talked about being able to understand when a user requires support. Being able to track, link and understand all these actions (with no affect on the data being used) would be ideal. True, metered support at the point you need it - and something TRULY data-driven.
 
+One thing that Tim always adds to the conversation is the key concept of time. What the Profile Layer can do is help reduce time to insight, and time to discovery. In this case, the movement up the levels of proficiency (from calculation to data model relationship) - Each line is a type of user and their journey. The Profile Layer can help to ensure they're aware of certain features, and nudging them in the right direction. For example, if a power user (who has some basic knowledge of data) discovers blends around the same time as the average user - the average user will hit the Tableau Trough, but the power user will - well - power through.
+
+![Image of the Tableau Trough](/assets/tableau-trough-tim.png)
+
+The Profile Layer can help inform this learning journey.
 
 
 #### Taking the personas and user bases, and taking actions
@@ -95,7 +100,12 @@ _Which of my key users use Tableau dashboards more than 60% of the day for me to
 _I want to make sure that a new feature I demoed is being used. Who'd benefit the most?_ Say it with me... p-r-o-f-i-l-e l-a-y-e-r
 
 
-There are so many nifty thing this can assist with, and all around Tableau Server and the interaction a user has. 
+The persona and profiles which follow you around no matter which product you're in (for example, Desktop and Web Edit) 
+
+![Image of Tableau's Site Users hover](/assets/adobe-profile.png)
+
+
+There are so many nifty things this can assist with, and all around Tableau Server and the interaction a user has. Further, imagine all the different features of that Tableau could build to fix into these. 
 
 
 ### Toward a data culture
