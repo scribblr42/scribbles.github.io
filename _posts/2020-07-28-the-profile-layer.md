@@ -2,7 +2,7 @@
 layout: post
 title: "Imagining... The Profile Layer: User Insight for every Tableau deployment"
 date: 2020-07-28
-tags: tableau tableau-blueprint tableau-trough profile-layer
+tags: tableau tableau-blueprint tableau-trough profile-layer ideas
 ---
 
 ![Image of Tableau's Site Users hover](/assets/tableau-profile-layer.png)
@@ -62,7 +62,9 @@ The idea here is to collect a user journey. Primarily - how does someone enter T
 
 ![Image of how did i get here from rick & morty](/assets/how-did-i-get-here-rick-morty.png)
 
-Let's build on this further. What if you could get a classification of users who all have created custom views. Or filter to users who often use web edit. Or even, how about being able to group by types of users you onboard? Now, parts of this are answered with an upcoming feature called **Collections** which is almost like a 'playlist' for your visualisations. But what the Profile Layer would allow is the "What next" question.
+Let's build on this further. What if you could get a classification of users who all have created custom views. Or filter to users who often use web edit. Or even, how about being able to group by types of users you onboard? Now, parts of this are answered with an upcoming feature called **Collections** which is almost like a 'playlist' for your visualisations (mentioned at conference as an idea, not confirmed, I hasten to add)
+
+What the Profile Layer would allow is the "What next" question.
 
 
 
@@ -82,7 +84,7 @@ One thing that Tim always adds to the conversation is the key concept of time. W
 
 ![Image of the Tableau Trough](/assets/tableau-trough-tim.png)
 
-The Profile Layer can help inform this learning journey.
+The Profile Layer can help inform this learning journey. Imagine a scenario where Tableau is able to anticipate frustration and nudge you toward a Help document, a Community resource or even simply toward a feature - but at exactly the right time.
 
 
 #### Taking the personas and user bases, and taking actions
@@ -104,13 +106,17 @@ The persona and profiles which follow you around no matter which product you're 
 
 ![Image of Tableau's Site Users hover](/assets/adobe-profile.png)
 
+What if, like Adobe Creative Cloud (this is another one of Tim's influences shining through), Tableau sent through a survey to understand what's ideal for your use case (Adobe do this on a 6-monthly basis) and allowed you to build out a canvas unique to you, the end user. Maybe you don't care about the new features in the Data Model, but set actions and horizontal scrolling? Yes please! Imagine how useful this information can then be to the developers, who then get to understand their user base without the user having to contribute to the Tableau Community or Forums directly.
 
-There are so many nifty things this can assist with, and all around Tableau Server and the interaction a user has. Further, imagine all the different features of that Tableau could build to fix into these. 
+These users, for me, are the bottom of the iceberg.
 
+There are so many nifty things this can assist with, and all around Tableau Server and the interaction a user has. 
 
 ### Toward a data culture
 
-To truly embrace a data culture, creating a Centre of Excellence and/or Enablement, hiring a few "data rockstars" from the Tableau community or 'letting Tableau work it's magic' doesn't work in practice. In a world where Tableau is becoming more attractive at scale for 'best in class' visualisation software, it needs best in class user management. And that has to start on Day 0. 
+To truly embrace a data culture, creating a Centre of Excellence and/or Enablement, hiring a few "data rockstars" from the Tableau community or 'letting Tableau work it's magic' doesn't work in practice. In a world where Tableau is becoming more attractive at scale for 'best in class' visualisation software, it needs best in class user management. And that has to start on Day 0.
+
+Most users don't have ambitions to be a data rockstar. Most users don't care who Ambassadors and Zen Masters are. What they care about the most is having a tool which allows them to explore, ask and answer questions of their data. They care about a fast time to insight, and ultimately - what we all crave in our work life... Something that makes life easier.
 
 Unleashing the promise of being able to manage users, the ability to make sure such a software not only deploys, but lands and grows is so important. If a tool is simply solved and used, it doesn't drive action or insight. But if you're able to utilise the tool to not only build insight, but also develop, grow, educate and (most importantly) enable your users then that's where true data culture is fostered. Being able to identify, build and understand your user base is so important to that journey.
 
