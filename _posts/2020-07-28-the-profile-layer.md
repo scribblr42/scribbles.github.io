@@ -27,9 +27,13 @@ Caveat here is, this is all hypothetical, I have no insight or product developme
 Let's lay it down. Currently, users of Tableau are classified in two ways - either by license type, or by Tableau Server site role. Shall we have a recap? Of course! (skip to the next header if you know what's next)
 
 **License types:** Creator, Explorer, Viewer.
+
 _Creator_: Minimum 1 licenses needed for any deployment, access to Tableau Server, Tableau Desktop and Tableau Prep Builder. Can do anything + everything with Tableau.
+
 _Explorer_: Minimum purchase of 5, a Creator needed (you cannae purchase a set of Explorers without 1 Creator). Ability to access Tableau Server, and web author (as well as Ask Data). Additional sets purchased 1 at a time.
+
 _Viewer_: Minimum purchase of 100, a Creator needed. Additional sets purchased 5 at a time. Viewers can view, interact and set up custom views & subscriptions on Tableau Server.
+
 
 **Site Roles:** These can get janky...
 This image is your friend
