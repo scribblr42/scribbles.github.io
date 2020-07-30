@@ -23,7 +23,7 @@ Caveat here is, this is all hypothetical, I have no insight or product developme
 
 
 
-####What the hell do you mean, Profile Layer
+#### What the hell do you mean, Profile Layer
 Let's lay it down. Currently, users of Tableau are classified in two ways - either by license type, or by Tableau Server site role. Shall we have a recap? Of course! (skip to the next header if you know what's next)
 
 **License types:** Creator, Explorer, Viewer.
