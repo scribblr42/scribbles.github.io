@@ -66,7 +66,7 @@ The idea here is to collect a user journey. Primarily - how does someone enter T
 
 ![Image of how did i get here from rick & morty](/assets/how-did-i-get-here-rick-morty.png)
 
-Let's build on this further. What if you could get a classification of users who all have created custom views. Or filter to users who often use web edit. Or even, how about being able to group by types of users you onboard? Now, parts of this are answered with an upcoming feature called **Collections** which is almost like a 'playlist' for your visualisations (mentioned at conference as an idea, not confirmed, I hasten to add)
+Let's build on this further. What if you could get a classification of users who all have created custom views. Or filter to users who often use web edit. Or even, how about being able to group by types of users you onboard?
 
 What the Profile Layer would allow is the "What next" question.
 
