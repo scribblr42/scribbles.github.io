@@ -71,7 +71,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![01 Old](/assets/01_adminview_user_traffic_views.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/01.%20Traffic%20to%20Views_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/01.%20Traffic%20to%20Views_v10.5.twb).
 
 ![01 New](/assets/01.%20Traffic%20to%20Views%20Reloaded.png)
 
@@ -82,7 +82,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![02 Old](/assets/02_adminview_datasource.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/02.%20Traffic%20to%20Data%20Sources_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/02.%20Traffic%20to%20Data%20Sources_v10.5.twb).
 
 ![02 New](/assets/02.%20Traffic%20to%20Data%20Sources%20Reloaded.png)
 
@@ -93,7 +93,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![03 Old](/assets/03_adminview_user_access.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/03.%20Actions%20by%20All%20Users_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/03.%20Actions%20by%20All%20Users_v10.5.twb).
 
 ![03 New](/assets/03.%20Actions%20by%20All%20Users%20Reloaded.png)
 
@@ -104,7 +104,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![04 Old](/assets/04_adminview_user_specific.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/04.%20Actions%20by%20Specific%20User_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/04.%20Actions%20by%20Specific%20User_v10.5.twb).
 
 ![04 New](/assets/04.%20Actions%20by%20Specific%20User%20Reloaded.png)
 
@@ -115,7 +115,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![05 Old](/assets/05_adminview_recentuser.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/05.%20Actions%20by%20Recent%20Users_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/05.%20Actions%20by%20Recent%20Users_v10.5.twb).
 
 ![05 New](/assets/05.%20Actions%20by%20Recent%20Users%20Reloaded.png)
 
@@ -126,7 +126,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![06 Old](/assets/06_adminview_extract.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/06.%20Background%20Tasks%20for%20Extracts_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/06.%20Background%20Tasks%20for%20Extracts_v10.5.twb).
 
 ![06 New](/assets/06.%20Background%20Tasks%20for%20Extracts%20Reloaded.png)
 
@@ -137,7 +137,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![07 Old](/assets/07_adminview_nonextract.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/07.%20Background%20Tasks%20for%20Non%20Extracts_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/07.%20Background%20Tasks%20for%20Non%20Extracts_v10.5.twb).
 
 ![07 New](/assets/07.%20Background%20Tasks%20for%20Non%20Extracts%20Reloaded.png)
 
@@ -148,7 +148,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![08 Old](/assets/08_adminview_loadtime.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/08.%20Stats%20for%20Load%20Times_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/08.%20Stats%20for%20Load%20Times_v10.5.twb).
 
 ![08 New](/assets/08.%20Stats%20for%20Load%20Times.png)
 
@@ -159,7 +159,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![09 Old](/assets/09_adminview_space.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/09.%20Stats%20for%20Space%20Usage_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/09.%20Stats%20for%20Space%20Usage_v10.5.twb).
 
 ![09 New](/assets/09.%20Stats%20for%20Space%20Usage%20Reloaded.png)
 
@@ -170,7 +170,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![10 Old](/assets/10_adminview_background_task_delay.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/10.%20Background%20Task%20Delays_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/10.%20Background%20Task%20Delays_v10.5.twb).
 
 ![10 New](/assets/10.%20Background%20Task%20Delays%20Reloaded.png)
 
@@ -181,7 +181,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![11 Old](/assets/11_adminview_performance_of_views.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/11.%20Performance%20of%20Views_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/11.%20Performance%20of%20Views_v10.5.twb).
 
 ![11 New](/assets/11.%20Performance%20of%20Views%20Reloaded.png)
 
@@ -192,24 +192,24 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 ![12 Old](/assets/12_adminview_space_all_nodes.png)
 
-You are able to download the reloaded version ![here](/assets/workbooks/12.%20Server%20Disk%20Space_v10.5.twb).
+You are able to download the reloaded version [here](/assets/workbooks/12.%20Server%20Disk%20Space_v10.5.twb).
 
 ![12 New](/assets/12.%20Server%20Disk%20Space%20Reloaded.png)
 
 
 ### TL;DR? Links to each of the Workbooks below:
 #### Right click, save as...
-01. Traffic to Views ![here](/assets/workbooks/01.%20Traffic%20to%20Views_v10.5.twb)
-02. Traffic to Datasources ![here](/assets/workbooks/02.%20Traffic%20to%20Data%20Sources_v10.5.twb)
-03. Actions by All Users ![here](/assets/workbooks/03.%20Actions%20by%20All%20Users_v10.5.twb)
-04. Actions by Specific User ![here](/assets/workbooks/04.%20Actions%20by%20Specific%20User_v10.5.twb)
-05. Actions by Recent Users ![here](/assets/workbooks/05.%20Actions%20by%20Recent%20Users_v10.5.twb)
-06. Background Tasks for Extracts ![here](/assets/workbooks/06.%20Background%20Tasks%20for%20Extracts_v10.5.twb)
-07. Background Tasks for Non-Extracts ![here](/assets/workbooks/07.%20Background%20Tasks%20for%20Non%20Extracts_v10.5.twb)
-08. Stats for Load Times ![here](/assets/workbooks/08.%20Stats%20for%20Load%20Times_v10.5.twb)
-09. Stats for Space Usage ![here](/assets/workbooks/09.%20Stats%20for%20Space%20Usage_v10.5.twb)
-10. Background Task Delays ![here](/assets/workbooks/10.%20Background%20Task%20Delays_v10.5.twb)
-11. Performance of Views ![here](/assets/workbooks/11.%20Performance%20of%20Views_v10.5.twb)
-12. Server Disk Space ![here](/assets/workbooks/12.%20Server%20Disk%20Space_v10.5.twb)
+01. Traffic to Views [here](/assets/workbooks/01.%20Traffic%20to%20Views_v10.5.twb)
+02. Traffic to Datasources [here](/assets/workbooks/02.%20Traffic%20to%20Data%20Sources_v10.5.twb)
+03. Actions by All Users [here](/assets/workbooks/03.%20Actions%20by%20All%20Users_v10.5.twb)
+04. Actions by Specific User [here](/assets/workbooks/04.%20Actions%20by%20Specific%20User_v10.5.twb)
+05. Actions by Recent Users [here](/assets/workbooks/05.%20Actions%20by%20Recent%20Users_v10.5.twb)
+06. Background Tasks for Extracts [here](/assets/workbooks/06.%20Background%20Tasks%20for%20Extracts_v10.5.twb)
+07. Background Tasks for Non-Extracts [here](/assets/workbooks/07.%20Background%20Tasks%20for%20Non%20Extracts_v10.5.twb)
+08. Stats for Load Times [here](/assets/workbooks/08.%20Stats%20for%20Load%20Times_v10.5.twb)
+09. Stats for Space Usage [here](/assets/workbooks/09.%20Stats%20for%20Space%20Usage_v10.5.twb)
+10. Background Task Delays [here](/assets/workbooks/10.%20Background%20Task%20Delays_v10.5.twb)
+11. Performance of Views [here](/assets/workbooks/11.%20Performance%20of%20Views_v10.5.twb)
+12. Server Disk Space [here](/assets/workbooks/12.%20Server%20Disk%20Space_v10.5.twb)
 
 Any questions or comments, you can find me with open DMs on Twitter [@Scribblr_42](https://www.twitter.com/scribblr_42) - Enjoy!
