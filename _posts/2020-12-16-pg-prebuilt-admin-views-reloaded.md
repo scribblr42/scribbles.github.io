@@ -73,7 +73,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/01.%20Traffic%20to%20Views_v10.5.twb).
 
-![01 New](/assets/01.%20Traffic%20to%20Views%20Reloaded.png)
+![01 New](/assets/01.%20Traffic%20to%20Views%20Reloaded.png =300px)
 
 
 #### 02. Traffic to Datasources
@@ -84,7 +84,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/02.%20Traffic%20to%20Data%20Sources_v10.5.twb).
 
-![02 New](/assets/02.%20Traffic%20to%20Data%20Sources%20Reloaded.png)
+![02 New](/assets/02.%20Traffic%20to%20Data%20Sources%20Reloaded.png =300px)
 
 
 #### 03. Actions by All Users
@@ -95,7 +95,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/03.%20Actions%20by%20All%20Users_v10.5.twb).
 
-![03 New](/assets/03.%20Actions%20by%20All%20Users%20Reloaded.png)
+![03 New](/assets/03.%20Actions%20by%20All%20Users%20Reloaded.png =300px)
 
 
 #### 04. Actions by Specific Users
@@ -106,7 +106,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/04.%20Actions%20by%20Specific%20User_v10.5.twb).
 
-![04 New](/assets/04.%20Actions%20by%20Specific%20User%20Reloaded.png)
+![04 New](/assets/04.%20Actions%20by%20Specific%20User%20Reloaded.png =300px)
 
 
 #### 05. Actions by Recent Users
@@ -117,7 +117,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/05.%20Actions%20by%20Recent%20Users_v10.5.twb).
 
-![05 New](/assets/05.%20Actions%20by%20Recent%20Users%20Reloaded.png)
+![05 New](/assets/05.%20Actions%20by%20Recent%20Users%20Reloaded.png =300px)
 
 
 #### 06. Background Tasks for Extracts
