@@ -73,7 +73,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/01.%20Traffic%20to%20Views_v10.5.twb).
 
-<img src="/assets/01.%20Traffic%20to%20Views%20Reloaded.png" width="400">
+<img src="/assets/01.%20Traffic%20to%20Views%20Reloaded.png" width="900">
 
 
 #### 02. Traffic to Datasources
@@ -84,7 +84,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/02.%20Traffic%20to%20Data%20Sources_v10.5.twb).
 
-<img src="/assets/02.%20Traffic%20to%20Data%20Sources%20Reloaded.png" width="400">
+<img src="/assets/02.%20Traffic%20to%20Data%20Sources%20Reloaded.png" width="900">
 
 
 #### 03. Actions by All Users
@@ -95,7 +95,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/03.%20Actions%20by%20All%20Users_v10.5.twb).
 
-![03 New](/assets/03.%20Actions%20by%20All%20Users%20Reloaded.png =300px)
+<img src="/assets/03.%20Actions%20by%20All%20Users%20Reloaded.png" width="900">
 
 
 #### 04. Actions by Specific Users
@@ -106,7 +106,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/04.%20Actions%20by%20Specific%20User_v10.5.twb).
 
-![04 New](/assets/04.%20Actions%20by%20Specific%20User%20Reloaded.png =300px)
+<img src="/assets/04.%20Actions%20by%20Specific%20User%20Reloaded.png" width="900">
 
 
 #### 05. Actions by Recent Users
@@ -117,7 +117,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/05.%20Actions%20by%20Recent%20Users_v10.5.twb).
 
-![05 New](/assets/05.%20Actions%20by%20Recent%20Users%20Reloaded.png =300px)
+<img src="/assets/05.%20Actions%20by%20Recent%20Users%20Reloaded.png" width="900">
 
 
 #### 06. Background Tasks for Extracts
@@ -128,7 +128,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/06.%20Background%20Tasks%20for%20Extracts_v10.5.twb).
 
-![06 New](/assets/06.%20Background%20Tasks%20for%20Extracts%20Reloaded.png)
+<img src="/assets/06.%20Background%20Tasks%20for%20Extracts%20Reloaded.png" width="900">
 
 
 #### 07. Background Tasks for Non-Extracts
@@ -139,7 +139,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/07.%20Background%20Tasks%20for%20Non%20Extracts_v10.5.twb).
 
-![07 New](/assets/07.%20Background%20Tasks%20for%20Non%20Extracts%20Reloaded.png)
+<img src="/assets/07.%20Background%20Tasks%20for%20Non%20Extracts%20Reloaded.png" width="900">
 
 
 #### 08. Stats for Load Times
@@ -150,7 +150,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/08.%20Stats%20for%20Load%20Times_v10.5.twb).
 
-![08 New](/assets/08.%20Stats%20for%20Load%20Times.png)
+<img src="/assets/08.%20Stats%20for%20Load%20Times.png" width="900">
 
 
 #### 09. Stats for Space Usage
@@ -161,7 +161,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/09.%20Stats%20for%20Space%20Usage_v10.5.twb).
 
-![09 New](/assets/09.%20Stats%20for%20Space%20Usage%20Reloaded.png)
+<img src="/assets/09.%20Stats%20for%20Space%20Usage%20Reloaded.png" width="900">
 
 
 #### 10. Background Task Delay
@@ -172,7 +172,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/10.%20Background%20Task%20Delays_v10.5.twb).
 
-![10 New](/assets/10.%20Background%20Task%20Delays%20Reloaded.png)
+<img src="/assets/10.%20Background%20Task%20Delays%20Reloaded.png" width="900">
 
 
 #### 11. Performance of Views
@@ -183,7 +183,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/11.%20Performance%20of%20Views_v10.5.twb).
 
-![11 New](/assets/11.%20Performance%20of%20Views%20Reloaded.png)
+<img src="/assets/11.%20Performance%20of%20Views%20Reloaded.png" width="900">
 
 
 #### 12. Server Disk Space
@@ -194,7 +194,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/12.%20Server%20Disk%20Space_v10.5.twb).
 
-![12 New](/assets/12.%20Server%20Disk%20Space%20Reloaded.png)
+<img src="/assets/12.%20Server%20Disk%20Space%20Reloaded.png" width="900">
 
 
 ### TL;DR? Links to each of the Workbooks below:
