@@ -1,0 +1,2140 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.0801.1333                               -->
+<workbook original-version='10.5' source-build='2020.3.0 (20203.20.0801.1333)' source-platform='mac' version='10.5' xml:base='https://localhost' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location derived-from='https://your-server-here/workbooks/08_StatsforLoadTimes?rev=1.0' id='08_StatsforLoadTimes' path='/workbooks' revision='1.0' site='project-griffon' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style />
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.5'>
+      <aliases enabled='yes' />
+      <column caption='Min Interactions' datatype='integer' name='[Parameter 3]' param-domain-type='any' role='measure' type='quantitative' value='1'>
+        <calculation class='tableau' formula='1' />
+      </column>
+    </datasource>
+    <datasource inline='true' name='Status - Monitor Requests And Users_v2020-3' version='10.5'>
+      <repository-location id='Status-MonitorRequestsAndUsers' path='/datasources' revision='1.0' />
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='postgres.41976.825453032400leaf'>
+            <connection authentication='username-password' class='postgres' dbname='workgroup' odbc-native-protocol='yes' one-time-sql='' port='8060' server='your-server-here' server-oauth='' sslmode='require' username='readonly' workgroup-auth-mode='prompt' />
+          </named-connection>
+        </named-connections>
+        <relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[_http_requests].[site_id]' />
+              <expression op='[_sites].[id]' />
+            </expression>
+          </clause>
+          <relation join='left' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[_http_requests].[session_id]' />
+                <expression op='[_sessions].[session_id]' />
+              </expression>
+            </clause>
+            <relation join='right' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[_users].[id]' />
+                  <expression op='[_http_requests].[user_id]' />
+                </expression>
+              </clause>
+              <relation connection='postgres.41976.825453032400leaf' name='_users' table='[public].[_users]' type='table' />
+              <relation connection='postgres.41976.825453032400leaf' name='_http_requests' table='[public].[_http_requests]' type='table' />
+            </relation>
+            <relation connection='postgres.41976.825453032400leaf' name='_sessions' table='[public].[_sessions]' type='table' />
+          </relation>
+          <relation connection='postgres.41976.825453032400leaf' name='_sites' table='[public].[_sites]' type='table' />
+        </relation>
+        <cols>
+          <map key='[action]' value='[_http_requests].[action]' />
+          <map key='[completed_at]' value='[_http_requests].[completed_at]' />
+          <map key='[controller]' value='[_http_requests].[controller]' />
+          <map key='[created_at]' value='[_http_requests].[created_at]' />
+          <map key='[currentsheet]' value='[_http_requests].[currentsheet]' />
+          <map key='[domain_id]' value='[_users].[domain_id]' />
+          <map key='[domain_name]' value='[_users].[domain_name]' />
+          <map key='[domain_short_name]' value='[_users].[domain_short_name]' />
+          <map key='[friendly_name]' value='[_users].[friendly_name]' />
+          <map key='[http_referer]' value='[_http_requests].[http_referer]' />
+          <map key='[http_request_uri]' value='[_http_requests].[http_request_uri]' />
+          <map key='[http_user_agent]' value='[_http_requests].[http_user_agent]' />
+          <map key='[id (_sites)]' value='[_sites].[id]' />
+          <map key='[id]' value='[_users].[id]' />
+          <map key='[licensing_role_id]' value='[_users].[licensing_role_id]' />
+          <map key='[licensing_role_name]' value='[_users].[licensing_role_name]' />
+          <map key='[login_at]' value='[_users].[login_at]' />
+          <map key='[name (_sites)]' value='[_sites].[name]' />
+          <map key='[name]' value='[_users].[name]' />
+          <map key='[port]' value='[_http_requests].[port]' />
+          <map key='[remote_ip]' value='[_http_requests].[remote_ip]' />
+          <map key='[session_id (_sessions)]' value='[_sessions].[session_id]' />
+          <map key='[session_id]' value='[_http_requests].[session_id]' />
+          <map key='[site_id (_http_requests)]' value='[_http_requests].[site_id]' />
+          <map key='[site_id (_sessions)]' value='[_sessions].[site_id]' />
+          <map key='[site_id]' value='[_users].[site_id]' />
+          <map key='[status]' value='[_sites].[status]' />
+          <map key='[system_user_id (_sessions)]' value='[_sessions].[system_user_id]' />
+          <map key='[system_user_id]' value='[_users].[system_user_id]' />
+          <map key='[updated_at]' value='[_sessions].[updated_at]' />
+          <map key='[url_namespace]' value='[_sites].[url_namespace]' />
+          <map key='[user_id (_sessions)]' value='[_sessions].[user_id]' />
+          <map key='[user_id]' value='[_http_requests].[user_id]' />
+          <map key='[user_ip]' value='[_http_requests].[user_ip]' />
+          <map key='[user_name]' value='[_sessions].[user_name]' />
+          <map key='[vizql_session]' value='[_http_requests].[vizql_session]' />
+          <map key='[worker]' value='[_http_requests].[worker]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>login_at</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[login_at]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>login_at</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>friendly_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[friendly_name]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>friendly_name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>licensing_role_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[licensing_role_id]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>licensing_role_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>licensing_role_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[licensing_role_name]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>licensing_role_name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>domain_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[domain_id]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>domain_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>system_user_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[system_user_id]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>system_user_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>domain_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[domain_name]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>domain_name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>domain_short_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[domain_short_name]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>domain_short_name</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>80</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>site_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[site_id]</local-name>
+            <parent-name>[_users]</parent-name>
+            <remote-alias>site_id</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>controller</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[controller]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>controller</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>action</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[action]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>action</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>http_referer</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[http_referer]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>http_referer</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>http_user_agent</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[http_user_agent]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>http_user_agent</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>http_request_uri</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[http_request_uri]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>http_request_uri</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remote_ip</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[remote_ip]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>remote_ip</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>created_at</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[created_at]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>created_at</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>session_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[session_id]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>session_id</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>completed_at</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[completed_at]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>completed_at</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>port</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[port]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>port</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>worker</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[worker]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>worker</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vizql_session</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[vizql_session]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>vizql_session</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_ip</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[user_ip]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>user_ip</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currentsheet</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[currentsheet]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>currentsheet</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>site_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[site_id (_http_requests)]</local-name>
+            <parent-name>[_http_requests]</parent-name>
+            <remote-alias>site_id</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>session_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[session_id (_sessions)]</local-name>
+            <parent-name>[_sessions]</parent-name>
+            <remote-alias>session_id</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>updated_at</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[updated_at]</local-name>
+            <parent-name>[_sessions]</parent-name>
+            <remote-alias>updated_at</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[user_id (_sessions)]</local-name>
+            <parent-name>[_sessions]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[user_name]</local-name>
+            <parent-name>[_sessions]</parent-name>
+            <remote-alias>user_name</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>system_user_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[system_user_id (_sessions)]</local-name>
+            <parent-name>[_sessions]</parent-name>
+            <remote-alias>system_user_id</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>site_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[site_id (_sessions)]</local-name>
+            <parent-name>[_sessions]</parent-name>
+            <remote-alias>site_id</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id (_sites)]</local-name>
+            <parent-name>[_sites]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[name (_sites)]</local-name>
+            <parent-name>[_sites]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>url_namespace</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[url_namespace]</local-name>
+            <parent-name>[_sites]</parent-name>
+            <remote-alias>url_namespace</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[_sites]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Load time' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[Calculation2]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ZN(Window_SUM([Calculation_5011203204125976]))' scope-isolation='false'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='async type' datatype='string' name='[Calculation_0911203203805906]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='if LOOKUP(MIN([Calculation_8251203203722951]),0) == 3 then&#10;  &quot;async&quot;&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) != 3  AND LOOKUP(MIN([Calculation_8251203203722951]),1)==3 then&#10;  // The length is computed from the start of the previous&#10;  &quot;start async&quot;&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) != 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The length is computed from the start of the previous&#10;  &quot;end async&quot;&#10;ELSE&#10;  &quot;standalone&quot;&#10;end'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='completed_at_local_15_min_bin' datatype='datetime' name='[Calculation_1671205215441463]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='datetime(int(float([Calculation_3471203204218240])*96)/96)' />
+      </column>
+      <column caption='request_type' datatype='string' name='[Calculation_2611203203455640]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if left(http_request_uri,7) == &quot;/views/&quot; then&#10;  &quot;load_view&quot;&#10;elseif left(http_request_uri,21) == &quot;/vizql/showadminview/&quot; then&#10;  &quot;load_view&quot;&#10;elseif contains(http_request_uri,&quot;bootstrapSession&quot;) then&#10;  &quot;compute_view&quot;&#10;elseif contains(http_request_uri,&quot;/status/&quot;) then&#10;  &quot;status&quot;&#10;else&#10;  &quot;other&quot;&#10;end' />
+        <aliases>
+          <alias key='&quot;compute_view&quot;' value='Render' />
+          <alias key='&quot;load_view&quot;' value='Retrieve' />
+        </aliases>
+      </column>
+      <column caption='site_url' datatype='string' name='[Calculation_3391203205222835]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [url_namespace] == &apos;&apos; THEN [url_namespace] ELSE &apos;t/&apos; + [url_namespace] + &apos;/&apos; END' />
+      </column>
+      <column caption='completed_at_local' datatype='datetime' name='[Calculation_3471203204218240]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[completed_at]+[tz_offset_days]' />
+      </column>
+      <column caption='num_requests' datatype='integer' name='[Calculation_4411203203842330]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if LOOKUP(MIN([Calculation_8251203203722951]),0) == 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)!=3 then&#10;  // The length is computed from the start of the previous&#10;  2&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) == 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The length is computed from the start of the previous&#10;  1 + PREVIOUS_VALUE(0)&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) != 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The length is computed from the start of the previous&#10;  1 + PREVIOUS_VALUE(0)&#10;ELSE&#10;  1&#10;end'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='num_sessions' datatype='integer' name='[Calculation_4591203203907097]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='countd(session_id)' />
+      </column>
+      <column caption='agg_request_length' datatype='real' name='[Calculation_5011203204125976]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if LOOKUP(MIN([Calculation_8251203203722951]),0) == 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)!=3 then&#10;  // The length is computed from the start of the previous&#10;  (MAX(completed_at)-LOOKUP(MIN([created_at]),-1))*86400&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) == 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The length is computed from the start of the previous&#10;  (MAX(completed_at)-LOOKUP(MAX([completed_at]),-1))*86400 + PREVIOUS_VALUE(0)&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) != 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The end of an async operation&#10;  (MAX(completed_at)-LOOKUP(MAX([completed_at]),-1))*86400 + PREVIOUS_VALUE(0)&#10;ELSE&#10;  86400*(MAX(completed_at)-MIN([created_at]))&#10;end'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='View Load Time' datatype='string' name='[Calculation_5103211714740629508]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if     [elapsed_time (copy)] &gt; 10 then &quot;&gt; 10 seconds&quot; &#10;elseif [elapsed_time (copy)] &gt; 5 then &quot;5 - 10 seconds&quot; &#10;elseif [elapsed_time (copy)] &gt; 3 then &quot;3 - 5 seconds&quot; &#10;else &quot;&lt; 3 seconds&quot; END' />
+      </column>
+      <column caption='View URL' datatype='string' name='[Calculation_5531203203614429]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if [Calculation_2611203203455640]=&quot;compute_view&quot; then&#10;  [http_referer]&#10;else&#10;  &quot;https://tableauserver.theinformationlab.co.uk&quot;+[http_request_uri]&#10;end' />
+      </column>
+      <column caption='elapsed_time' datatype='real' name='[Calculation_7391203204726330]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(completed_at-created_at)' />
+      </column>
+      <column caption='created_at_local' datatype='datetime' name='[Calculation_7431203204157460]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[created_at]+[tz_offset_days]' />
+      </column>
+      <column aggregation='Sum' caption='request_code' datatype='integer' name='[Calculation_8251203203722951]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='if startswith([http_request_uri],&quot;/views/&quot;) or startswith([http_request_uri], &quot;/vizql/showadminview/&quot;) then&#10;  1&#10;elseif contains([http_request_uri],&quot;/bootstrapSession/&quot;) then&#10;  2&#10;elseif contains([http_request_uri],&quot;/status/&quot;) or contains([http_request_uri],&quot;/errors/&quot;) then&#10;  3&#10;else&#10;  0&#10;end' />
+      </column>
+      <column caption='Bad View?' datatype='boolean' name='[Calculation_8371203203531503]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='currentsheet == &quot;&quot; or isnull(currentsheet) or isnull(vizql_session)' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Action' datatype='string' name='[action]' role='dimension' type='nominal' />
+      <column caption='Completed At' datatype='datetime' name='[completed_at]' role='dimension' type='ordinal' />
+      <column caption='Controller' datatype='string' name='[controller]' role='dimension' type='nominal' />
+      <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+      <column caption='View Name' datatype='string' name='[currentsheet]' role='dimension' type='nominal' />
+      <column caption='Domain Id' datatype='integer' name='[domain_id]' role='dimension' type='ordinal' />
+      <column caption='Domain Name' datatype='string' name='[domain_name]' role='dimension' type='nominal' />
+      <column caption='Domain Short Name' datatype='string' name='[domain_short_name]' role='dimension' type='nominal' />
+      <column caption='elapsed_time_sec' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[elapsed_time (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_7391203204726330]*86400' />
+      </column>
+      <column caption='Friendly Name' datatype='string' name='[friendly_name]' role='dimension' type='nominal' />
+      <column caption='Http Referer' datatype='string' name='[http_referer]' role='dimension' type='nominal' />
+      <column caption='Http Request Uri' datatype='string' name='[http_request_uri]' role='dimension' type='nominal' />
+      <column caption='Http User Agent' datatype='string' name='[http_user_agent]' role='dimension' type='nominal' />
+      <column caption='Id ( Sites)' datatype='integer' name='[id (_sites)]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Licensing Role Id' datatype='integer' name='[licensing_role_id]' role='dimension' type='ordinal' />
+      <column caption='Licensing Role Name' datatype='string' name='[licensing_role_name]' role='dimension' type='nominal' />
+      <column caption='Login At' datatype='datetime' name='[login_at]' role='dimension' type='ordinal' />
+      <column caption='Site' datatype='string' name='[name (_sites)]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Port' datatype='integer' name='[port]' role='measure' type='quantitative' />
+      <column caption='Remote Ip' datatype='string' name='[remote_ip]' role='dimension' type='nominal' />
+      <column caption='Session Id ( Sessions)' datatype='string' name='[session_id (_sessions)]' role='dimension' type='nominal' />
+      <column caption='Session Id' datatype='string' name='[session_id]' role='dimension' type='nominal' />
+      <column caption='Site Id ( Http Requests)' datatype='integer' name='[site_id (_http_requests)]' role='dimension' type='ordinal' />
+      <column caption='Site Id ( Sessions)' datatype='integer' name='[site_id (_sessions)]' role='dimension' type='ordinal' />
+      <column caption='Site Id' datatype='integer' name='[site_id]' role='dimension' type='ordinal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='System User Id ( Sessions)' datatype='integer' name='[system_user_id (_sessions)]' role='dimension' type='ordinal' />
+      <column caption='System User Id' datatype='integer' name='[system_user_id]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[tz_offset_days]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='0.041666666666666664' />
+      </column>
+      <column caption='Updated At' datatype='datetime' name='[updated_at]' role='dimension' type='ordinal' />
+      <column caption='Url Namespace' datatype='string' name='[url_namespace]' role='dimension' type='nominal' />
+      <column caption='User Id ( Sessions)' datatype='integer' name='[user_id (_sessions)]' role='dimension' type='ordinal' />
+      <column caption='User Id' datatype='integer' name='[user_id]' role='dimension' type='ordinal' />
+      <column caption='User Ip' datatype='string' name='[user_ip]' role='dimension' type='nominal' />
+      <column caption='User Name' datatype='string' name='[user_name]' role='dimension' type='nominal' />
+      <column caption='Vizql Session' datatype='string' name='[vizql_session]' role='dimension' type='nominal' />
+      <column caption='Worker' datatype='string' name='[worker]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_2611203203455640]' derivation='None' name='[none:Calculation_2611203203455640:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_5103211714740629508]' derivation='None' name='[none:Calculation_5103211714740629508:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_3471203204218240]' derivation='Hour-Trunc' name='[thr:Calculation_3471203204218240:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation_3471203204218240]' derivation='Minute-Trunc' name='[tmi:Calculation_3471203204218240:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Currentsheet)' hidden='true' name='[Action (Currentsheet)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[currentsheet]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (HOUR(completed_at_local))' hidden='true' name='[Action (HOUR(completed_at_local))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[thr:Calculation_3471203204218240:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (HOUR(completed_at_local),View Load Time)' hidden='true' name='[Action (HOUR(completed_at_local),View Load Time)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[thr:Calculation_3471203204218240:ok]' />
+          <groupfilter function='level-members' level='[Calculation_5103211714740629508]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (MINUTE(completed_at_local))' hidden='true' name='[Action (MINUTE(completed_at_local))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tmi:Calculation_3471203204218240:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (View Load Time)' hidden='true' name='[Action (View Load Time)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_5103211714740629508]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (View Name)' hidden='true' name='[Action (View Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[currentsheet]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (completed_at_local_15_min_bin)' hidden='true' name='[Action (completed_at_local_15_min_bin)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_1671205215441463]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' parameter-percentage='0.030914' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_2611203203455640:nk]' type='palette'>
+            <map to='#2ca02c'>
+              <bucket>&quot;other&quot;</bucket>
+            </map>
+            <map to='#67bf5c'>
+              <bucket>%all%</bucket>
+            </map>
+            <map to='#7b66d2'>
+              <bucket>&quot;compute_view&quot;</bucket>
+            </map>
+            <map to='#94917b'>
+              <bucket>&quot;load_view&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_5103211714740629508:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;&lt; 3 seconds&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;3 - 5 seconds&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;&gt; 10 seconds&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;5 - 10 seconds&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource inline='true' name='Status - Start Times For Sessions_v2020-3' version='10.5'>
+      <repository-location id='Status-StartTimesForSessions' path='/datasources' revision='1.0' />
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='postgres.41976.827028101800leaf'>
+            <connection authentication='username-password' class='postgres' dbname='workgroup' odbc-native-protocol='yes' one-time-sql='' port='8060' server='your-server-here' server-oauth='' sslmode='require' username='readonly' workgroup-auth-mode='prompt' />
+          </named-connection>
+        </named-connections>
+        <relation connection='postgres.41976.827028101800leaf' name='TableauSQL' type='text'>SELECT http_requests.vizql_session AS vizql_session,
+  MIN(http_requests.created_at) AS session_start_time
+FROM public._http_requests http_requests
+WHERE vizql_session IS NOT NULL
+GROUP BY vizql_session</relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>vizql_session</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[vizql_session]</local-name>
+            <parent-name>[TableauSQL]</parent-name>
+            <remote-alias>vizql_session</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>session_start_time</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[session_start_time]</local-name>
+            <parent-name>[TableauSQL]</parent-name>
+            <remote-alias>session_start_time</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Local Session Start Time' datatype='datetime' name='[Calculation_9571203204005081]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[session_start_time]+[tz_offset_days]' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='real' name='[tz_offset_days]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='0.041666666666666664' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-dependencies datasource='Status - Monitor Requests And Users_v2020-3'>
+      <column-instance column='[vizql_session]' derivation='None' name='[none:vizql_session:nk]' pivot='key' type='nominal' />
+      <column caption='Vizql Session' datatype='string' name='[vizql_session]' role='dimension' type='nominal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='Status - Start Times For Sessions_v2020-3'>
+      <column-instance column='[vizql_session]' derivation='None' name='[none:vizql_session:nk]' pivot='key' type='nominal' />
+      <column datatype='string' name='[vizql_session]' role='dimension' type='nominal' />
+    </datasource-dependencies>
+    <datasource-relationship source='Status - Start Times For Sessions_v2020-3' target='Status - Monitor Requests And Users_v2020-3'>
+      <column-mapping>
+        <map key='[Status - Start Times For Sessions_v2020-3].[none:vizql_session:nk]' value='[Status - Monitor Requests And Users_v2020-3].[none:vizql_session:nk]' />
+      </column-mapping>
+    </datasource-relationship>
+  </datasource-relationships>
+  <actions>
+    <action caption='Select Time' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Stats for Load Times' type='sheet' worksheet='What Are The Average Load Times for Views?' />
+      <link caption='Select Time' delimiter=',' escape='\' expression='tsl:Stats%20for%20Load%20Times?%5BStatus%20-%20Monitor%20Requests%20And%20Users_v2020-3%5D.%5Bcurrentsheet%5D~s0=&lt;[currentsheet]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='What Are The Average Load Times for Views?' />
+        <param name='target' value='Stats for Load Times' />
+      </command>
+    </action>
+    <action caption='Select View' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Stats for Load Times' type='sheet' worksheet='What is the Exact Load Time For Views?' />
+      <link caption='Select View' delimiter=',' escape='\' expression='tsl:Stats%20for%20Load%20Times?%5BStatus%20-%20Monitor%20Requests%20And%20Users_v2020-3%5D.%5Bcurrentsheet%5D~s0=&lt;[currentsheet]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='What is the Exact Load Time For Views?' />
+        <param name='target' value='Stats for Load Times' />
+      </command>
+    </action>
+    <action caption='Go to View' name='[Action3]'>
+      <source dashboard='Stats for Load Times' type='sheet' worksheet='What is the Exact Load Time For Views?' />
+      <link caption='Go to View' expression='&lt;[Calculation_5531203203614429]&gt;' />
+    </action>
+    <datasources>
+      <datasource name='Status - Monitor Requests And Users_v2020-3' />
+    </datasources>
+    <datasource-dependencies datasource='Status - Monitor Requests And Users_v2020-3'>
+      <column caption='View URL' datatype='string' name='[Calculation_5531203203614429]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if [Calculation_2611203203455640]=&quot;compute_view&quot; then&#10;  [http_referer]&#10;else&#10;  &quot;https://tableauserver.theinformationlab.co.uk&quot;+[http_request_uri]&#10;end' />
+      </column>
+      <column caption='View Name' datatype='string' name='[currentsheet]' role='dimension' type='nominal' />
+    </datasource-dependencies>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='What Are The Average Load Times for Views?'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='12'>What are the average load times for Views?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='WhatAreTheAverageLoadTimesforViews' path='/t/project-griffon/workbooks/8_StatsforLoadTimes' revision='' site='project-griffon' />
+      <table>
+        <view>
+          <datasources>
+            <datasource name='Status - Monitor Requests And Users_v2020-3' />
+          </datasources>
+          <datasource-dependencies datasource='Status - Monitor Requests And Users_v2020-3'>
+            <column caption='request_type' datatype='string' name='[Calculation_2611203203455640]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if left(http_request_uri,7) == &quot;/views/&quot; then&#10;  &quot;load_view&quot;&#10;elseif left(http_request_uri,21) == &quot;/vizql/showadminview/&quot; then&#10;  &quot;load_view&quot;&#10;elseif contains(http_request_uri,&quot;bootstrapSession&quot;) then&#10;  &quot;compute_view&quot;&#10;elseif contains(http_request_uri,&quot;/status/&quot;) then&#10;  &quot;status&quot;&#10;else&#10;  &quot;other&quot;&#10;end' />
+              <aliases>
+                <alias key='&quot;compute_view&quot;' value='Render' />
+                <alias key='&quot;load_view&quot;' value='Retrieve' />
+              </aliases>
+            </column>
+            <column caption='completed_at_local' datatype='datetime' name='[Calculation_3471203204218240]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[completed_at]+[tz_offset_days]' />
+            </column>
+            <column caption='elapsed_time' datatype='real' name='[Calculation_7391203204726330]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(completed_at-created_at)' />
+            </column>
+            <column caption='Bad View?' datatype='boolean' name='[Calculation_8371203203531503]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='currentsheet == &quot;&quot; or isnull(currentsheet) or isnull(vizql_session)' />
+            </column>
+            <column-instance column='[elapsed_time (copy)]' derivation='Avg' name='[avg:elapsed_time (copy):qk]' pivot='key' type='quantitative' />
+            <column caption='Completed At' datatype='datetime' name='[completed_at]' role='dimension' type='ordinal' />
+            <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+            <column caption='View Name' datatype='string' name='[currentsheet]' role='dimension' type='nominal' />
+            <column caption='elapsed_time_sec' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[elapsed_time (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_7391203204726330]*86400' />
+            </column>
+            <column caption='Http Request Uri' datatype='string' name='[http_request_uri]' role='dimension' type='nominal' />
+            <column caption='Site' datatype='string' name='[name (_sites)]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2611203203455640]' derivation='None' name='[none:Calculation_2611203203455640:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_8371203203531503]' derivation='None' name='[none:Calculation_8371203203531503:nk]' pivot='key' type='nominal' />
+            <column-instance column='[completed_at]' derivation='None' name='[none:completed_at:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[currentsheet]' derivation='None' name='[none:currentsheet:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name (_sites)]' derivation='None' name='[none:name (_sites):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3471203204218240]' derivation='Minute-Trunc' name='[tmi:Calculation_3471203204218240:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[tz_offset_days]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='0.041666666666666664' />
+            </column>
+            <column caption='Vizql Session' datatype='string' name='[vizql_session]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[Action (Currentsheet)]'>
+            <groupfilter function='level-members' level='[currentsheet]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[Action (View Name)]'>
+            <groupfilter function='level-members' level='[currentsheet]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]' included-values='all' />
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_2611203203455640:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_2611203203455640:nk]' member='&quot;compute_view&quot;' />
+              <groupfilter function='member' level='[none:Calculation_2611203203455640:nk]' member='&quot;load_view&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_8371203203531503:nk]'>
+            <groupfilter function='member' level='[none:Calculation_8371203203531503:nk]' member='false' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='relative-date' column='[Status - Monitor Requests And Users_v2020-3].[none:completed_at:qk]' filter-group='3' first-period='-23' include-future='true' include-null='false' last-period='0' period-type='day' />
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]' filter-group='18'>
+            <groupfilter function='level-members' level='[none:currentsheet:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[none:name (_sites):nk]' filter-group='19'>
+            <groupfilter function='level-members' level='[none:name (_sites):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_2611203203455640:nk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_8371203203531503:nk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:completed_at:qk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[Action (Currentsheet)]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:name (_sites):nk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[Action (View Name)]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]' scope='rows' value='Time (sec)' />
+            <format attr='subtitle' class='0' field='[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]' scope='rows' value='true' />
+            <encoding attr='space' class='0' field='[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]' field-type='quantitative' range-type='independent' scope='rows' type='space' />
+            <format attr='title' class='0' field='[Status - Monitor Requests And Users_v2020-3].[tmi:Calculation_3471203204218240:qk]' scope='cols' value='' />
+            <format attr='subtitle' class='0' field='[Status - Monitor Requests And Users_v2020-3].[tmi:Calculation_3471203204218240:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[Status - Monitor Requests And Users_v2020-3].[tmi:Calculation_3471203204218240:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_2611203203455640:nk]' value='116' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[Status - Monitor Requests And Users_v2020-3].[none:completed_at:qk]' value='Time Range' />
+            <format attr='title' field='[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]' value='Load Time (sec)' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Date:  </run>
+                <run bold='true'><![CDATA[<[Status - Monitor Requests And Users_v2020-3].[tmi:Calculation_3471203204218240:qk]>]]></run>
+                <run fontcolor='#787878'>&#10;Avg. Elapsed Time:  </run>
+                <run bold='true'><![CDATA[<[Status - Monitor Requests And Users_v2020-3].[sum:elapsed_time (copy):qk]> ]]></run>
+                <run>seconds</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#87a5cb' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true'>[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]</rows>
+        <cols>[Status - Monitor Requests And Users_v2020-3].[tmi:Calculation_3471203204218240:qk]</cols>
+        <show-full-range>
+          <column>[Status - Monitor Requests And Users_v2020-3].[Minute of Completed (bin)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+    <worksheet name='What is the Exact Load Time For Views?'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='12'>What are the exact load times for Views?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='WhatistheExactLoadTimeForViews' path='/t/project-griffon/workbooks/8_StatsforLoadTimes' revision='' site='project-griffon' />
+      <table>
+        <view>
+          <datasources>
+            <datasource name='Status - Monitor Requests And Users_v2020-3' />
+            <datasource name='Status - Start Times For Sessions_v2020-3' />
+          </datasources>
+          <datasource-dependencies datasource='Status - Monitor Requests And Users_v2020-3'>
+            <column caption='Total Load time' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[Calculation2]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ZN(Window_SUM([Calculation_5011203204125976]))' scope-isolation='false'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='async type' datatype='string' name='[Calculation_0911203203805906]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='if LOOKUP(MIN([Calculation_8251203203722951]),0) == 3 then&#10;  &quot;async&quot;&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) != 3  AND LOOKUP(MIN([Calculation_8251203203722951]),1)==3 then&#10;  // The length is computed from the start of the previous&#10;  &quot;start async&quot;&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) != 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The length is computed from the start of the previous&#10;  &quot;end async&quot;&#10;ELSE&#10;  &quot;standalone&quot;&#10;end'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='request_type' datatype='string' name='[Calculation_2611203203455640]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if left(http_request_uri,7) == &quot;/views/&quot; then&#10;  &quot;load_view&quot;&#10;elseif left(http_request_uri,21) == &quot;/vizql/showadminview/&quot; then&#10;  &quot;load_view&quot;&#10;elseif contains(http_request_uri,&quot;bootstrapSession&quot;) then&#10;  &quot;compute_view&quot;&#10;elseif contains(http_request_uri,&quot;/status/&quot;) then&#10;  &quot;status&quot;&#10;else&#10;  &quot;other&quot;&#10;end' />
+              <aliases>
+                <alias key='&quot;compute_view&quot;' value='Render' />
+                <alias key='&quot;load_view&quot;' value='Retrieve' />
+              </aliases>
+            </column>
+            <column caption='site_url' datatype='string' name='[Calculation_3391203205222835]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [url_namespace] == &apos;&apos; THEN [url_namespace] ELSE &apos;t/&apos; + [url_namespace] + &apos;/&apos; END' />
+            </column>
+            <column caption='num_requests' datatype='integer' name='[Calculation_4411203203842330]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if LOOKUP(MIN([Calculation_8251203203722951]),0) == 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)!=3 then&#10;  // The length is computed from the start of the previous&#10;  2&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) == 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The length is computed from the start of the previous&#10;  1 + PREVIOUS_VALUE(0)&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) != 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The length is computed from the start of the previous&#10;  1 + PREVIOUS_VALUE(0)&#10;ELSE&#10;  1&#10;end'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='agg_request_length' datatype='real' name='[Calculation_5011203204125976]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if LOOKUP(MIN([Calculation_8251203203722951]),0) == 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)!=3 then&#10;  // The length is computed from the start of the previous&#10;  (MAX(completed_at)-LOOKUP(MIN([created_at]),-1))*86400&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) == 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The length is computed from the start of the previous&#10;  (MAX(completed_at)-LOOKUP(MAX([completed_at]),-1))*86400 + PREVIOUS_VALUE(0)&#10;ELSEIF LOOKUP(MIN([Calculation_8251203203722951]),0) != 3  AND LOOKUP(MIN([Calculation_8251203203722951]),-1)==3 then&#10;  // The end of an async operation&#10;  (MAX(completed_at)-LOOKUP(MAX([completed_at]),-1))*86400 + PREVIOUS_VALUE(0)&#10;ELSE&#10;  86400*(MAX(completed_at)-MIN([created_at]))&#10;end'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='View URL' datatype='string' name='[Calculation_5531203203614429]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [Calculation_2611203203455640]=&quot;compute_view&quot; then&#10;  [http_referer]&#10;else&#10;  &quot;https://tableauserver.theinformationlab.co.uk&quot;+[http_request_uri]&#10;end' />
+            </column>
+            <column caption='elapsed_time' datatype='real' name='[Calculation_7391203204726330]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(completed_at-created_at)' />
+            </column>
+            <column caption='created_at_local' datatype='datetime' name='[Calculation_7431203204157460]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[created_at]+[tz_offset_days]' />
+            </column>
+            <column aggregation='Sum' caption='request_code' datatype='integer' name='[Calculation_8251203203722951]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if startswith([http_request_uri],&quot;/views/&quot;) or startswith([http_request_uri], &quot;/vizql/showadminview/&quot;) then&#10;  1&#10;elseif contains([http_request_uri],&quot;/bootstrapSession/&quot;) then&#10;  2&#10;elseif contains([http_request_uri],&quot;/status/&quot;) or contains([http_request_uri],&quot;/errors/&quot;) then&#10;  3&#10;else&#10;  0&#10;end' />
+            </column>
+            <column caption='Bad View?' datatype='boolean' name='[Calculation_8371203203531503]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='currentsheet == &quot;&quot; or isnull(currentsheet) or isnull(vizql_session)' />
+            </column>
+            <column-instance column='[currentsheet]' derivation='Attribute' name='[attr:currentsheet:nk]' pivot='key' type='nominal' />
+            <column-instance column='[elapsed_time (copy)]' derivation='Avg' name='[avg:elapsed_time (copy):qk]' pivot='key' type='quantitative' />
+            <column caption='Completed At' datatype='datetime' name='[completed_at]' role='dimension' type='ordinal' />
+            <column caption='Created At' datatype='datetime' name='[created_at]' role='dimension' type='ordinal' />
+            <column caption='View Name' datatype='string' name='[currentsheet]' role='dimension' type='nominal' />
+            <column caption='elapsed_time_sec' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[elapsed_time (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_7391203204726330]*86400' />
+            </column>
+            <column caption='Http Referer' datatype='string' name='[http_referer]' role='dimension' type='nominal' />
+            <column caption='Http Request Uri' datatype='string' name='[http_request_uri]' role='dimension' type='nominal' />
+            <column-instance column='[elapsed_time (copy)]' derivation='Max' name='[max:elapsed_time (copy):qk]' pivot='key' type='quantitative' />
+            <column caption='Site' datatype='string' name='[name (_sites)]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2611203203455640]' derivation='None' name='[none:Calculation_2611203203455640:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3391203205222835]' derivation='None' name='[none:Calculation_3391203205222835:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_5531203203614429]' derivation='None' name='[none:Calculation_5531203203614429:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_7431203204157460]' derivation='None' name='[none:Calculation_7431203204157460:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_8251203203722951]' derivation='None' name='[none:Calculation_8251203203722951:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_8371203203531503]' derivation='None' name='[none:Calculation_8371203203531503:nk]' pivot='key' type='nominal' />
+            <column-instance column='[completed_at]' derivation='None' name='[none:completed_at:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[currentsheet]' derivation='None' name='[none:currentsheet:nk]' pivot='key' type='nominal' />
+            <column-instance column='[http_request_uri]' derivation='None' name='[none:http_request_uri:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name (_sites)]' derivation='None' name='[none:name (_sites):nk]' pivot='key' type='nominal' />
+            <column-instance column='[vizql_session]' derivation='None' name='[none:vizql_session:nk]' pivot='key' type='nominal' />
+            <column datatype='real' name='[tz_offset_days]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='0.041666666666666664' />
+            </column>
+            <column caption='Url Namespace' datatype='string' name='[url_namespace]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation2]' derivation='User' name='[usr:Calculation2:qk:1]' pivot='key' type='quantitative'>
+              <table-calc level-address='[Status - Monitor Requests And Users_v2020-3].[Calculation_2611203203455640]' ordering-type='Field'>
+                <order field='[Status - Monitor Requests And Users_v2020-3].[Calculation_2611203203455640]' />
+                <order field='[Status - Monitor Requests And Users_v2020-3].[name (_sites)]' />
+                <order field='[Status - Monitor Requests And Users_v2020-3].[Calculation_7431203204157460]' />
+                <order field='[Status - Monitor Requests And Users_v2020-3].[http_request_uri]' />
+                <order field='[Status - Start Times For Sessions_v2020-3].[Calculation_9571203204005081]' />
+                <order field='[Status - Monitor Requests And Users_v2020-3].[Calculation_8251203203722951]' />
+                <order field='[Status - Monitor Requests And Users_v2020-3].[Calculation_3391203205222835]' />
+                <order field='[Status - Monitor Requests And Users_v2020-3].[currentsheet]' />
+                <order field='[Status - Monitor Requests And Users_v2020-3].[Calculation_5531203203614429]' />
+              </table-calc>
+              <table-calc field='[Status - Monitor Requests And Users_v2020-3].[Calculation_5011203204125976]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_0911203203805906]' derivation='User' name='[usr:Calculation_0911203203805906:nk:1]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_4411203203842330]' derivation='User' name='[usr:Calculation_4411203203842330:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column caption='Vizql Session' datatype='string' name='[vizql_session]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='Status - Start Times For Sessions_v2020-3'>
+            <column caption='Local Session Start Time' datatype='datetime' name='[Calculation_9571203204005081]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[session_start_time]+[tz_offset_days]' />
+            </column>
+            <column-instance column='[Calculation_9571203204005081]' derivation='None' name='[none:Calculation_9571203204005081:ok]' pivot='key' type='ordinal' />
+            <column datatype='datetime' name='[session_start_time]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[tz_offset_days]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='0.041666666666666664' />
+            </column>
+          </datasource-dependencies>
+          <filter class='quantitative' column='[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>60.0</max>
+          </filter>
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_2611203203455640:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_2611203203455640:nk]' member='&quot;compute_view&quot;' />
+              <groupfilter function='member' level='[none:Calculation_2611203203455640:nk]' member='&quot;load_view&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_2611203203455640:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;load_view&quot;</bucket>
+              <bucket>&quot;compute_view&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </sort>
+          <sort class='computed' column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_5531203203614429:nk]' direction='DESC' using='[Status - Monitor Requests And Users_v2020-3].[max:elapsed_time (copy):qk]' />
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_8371203203531503:nk]'>
+            <groupfilter function='member' level='[none:Calculation_8371203203531503:nk]' member='false' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='relative-date' column='[Status - Monitor Requests And Users_v2020-3].[none:completed_at:qk]' filter-group='3' first-period='-23' include-future='true' include-null='false' last-period='0' period-type='day' />
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]' filter-group='18'>
+            <groupfilter function='level-members' level='[none:currentsheet:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <sort class='computed' column='[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]' direction='DESC' using='[Status - Monitor Requests And Users_v2020-3].[max:elapsed_time (copy):qk]' />
+          <filter class='categorical' column='[Status - Monitor Requests And Users_v2020-3].[none:name (_sites):nk]' filter-group='19'>
+            <groupfilter function='level-members' level='[none:name (_sites):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_2611203203455640:nk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_8371203203531503:nk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:name (_sites):nk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]</column>
+            <column>[Status - Monitor Requests And Users_v2020-3].[none:completed_at:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' scope='cols' value='Load Time (sec)' />
+            <format attr='subtitle' class='0' field='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' scope='cols' value='true' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]' value='264' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='background-color' id='refline5' value='#ffffffcb' />
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-size' id='refline0' value='1' />
+            <format attr='stroke-color' id='refline0' value='#00275e' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]' value='View' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='9' selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_2611203203455640:nk]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_5531203203614429:nk]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[none:name (_sites):nk]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[none:http_request_uri:nk]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[none:vizql_session:nk]' />
+              <lod column='[Status - Start Times For Sessions_v2020-3].[none:Calculation_9571203204005081:ok]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation_0911203203805906:nk:1]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_8251203203722951:ok]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation_4411203203842330:qk]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_7431203204157460:ok]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[none:Calculation_3391203205222835:nk]' />
+              <lod column='[Status - Monitor Requests And Users_v2020-3].[attr:currentsheet:nk]' />
+            </encodings>
+            <reference-line axis-column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' enable-instant-analytics='true' formula='average' id='refline0' label-type='none' probability='95' scope='per-table' value-column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' z-order='4' />
+            <reference-line axis-column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='quantiles' id='refline3' label-type='none' scope='per-cell' symmetric='true' tile-count='4' value-column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' z-order='1' />
+            <reference-line axis-column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' enable-instant-analytics='true' formula='median' id='refline4' label-type='none' probability='95' scope='per-cell' value-column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' z-order='2' />
+            <reference-line axis-column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' enable-instant-analytics='true' formula='average' id='refline5' label-type='value' probability='95' scope='per-cell' value-column='[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]' z-order='3' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontsize='11'>Total Load Time:</run>
+                <run fontcolor='#787878' fontsize='11'>Æ&#9;</run>
+                <run bold='true' fontsize='11'><![CDATA[<[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]> ]]></run>
+                <run fontsize='11'>seconds&#10;started at </run>
+                <run bold='true' fontsize='11'><![CDATA[<[Status - Start Times For Sessions_v2020-3].[none:Calculation_9571203204005081:ok]>]]></run>
+                <run bold='true' fontcolor='#6f95bf'>Æ&#10; </run>
+                <run fontcolor='#787878'>&#10;Session ID:  </run>
+                <run bold='true'><![CDATA[<[Status - Monitor Requests And Users_v2020-3].[none:vizql_session:nk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.1974033117294312' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#87a5cb' />
+                <format attr='mark-transparency' value='155' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]</rows>
+        <cols>[Status - Monitor Requests And Users_v2020-3].[usr:Calculation2:qk:1]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Stats for Load Times'>
+      <repository-location derived-from='https://your-server-here/workbooks/08_StatsforLoadTimes/StatsforLoadTimes?rev=' id='349' path='/workbooks/08_StatsforLoadTimes' revision='' site='project-griffon' />
+      <style />
+      <size maxheight='900' maxwidth='1200' minheight='900' minwidth='1200' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Status - Monitor Requests And Users_v2020-3' />
+      </datasources>
+      <datasource-dependencies datasource='Status - Monitor Requests And Users_v2020-3'>
+        <column-instance column='[elapsed_time (copy)]' derivation='Avg' name='[avg:elapsed_time (copy):qk]' pivot='key' type='quantitative' />
+        <column caption='Completed At' datatype='datetime' name='[completed_at]' role='dimension' type='ordinal' />
+        <column caption='View Name' datatype='string' name='[currentsheet]' role='dimension' type='nominal' />
+        <column caption='elapsed_time_sec' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[elapsed_time (copy)]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='[Calculation_7391203204726330]*86400' />
+        </column>
+        <column-instance column='[completed_at]' derivation='None' name='[none:completed_at:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[currentsheet]' derivation='None' name='[none:currentsheet:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone fixed-size='31' forceUpdate='true' h='7492' id='3' is-fixed='true' type='text' w='96998' x='1501' y='2000'>
+            <formatted-text>
+              <run bold='true' fontsize='16'>How Long Does it Take for Views to Load?</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#898989' fontsize='8'>(Click to filter)</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='margin-top' value='0' />
+              <format attr='margin-right' value='0' />
+              <format attr='margin-left' value='0' />
+            </zone-style>
+          </zone>
+          <zone h='88508' id='17' param='vert' type='layout-flow' w='96998' x='1501' y='9492'>
+            <zone fixed-size='75' h='8333' id='15' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type='layout-flow' w='96998' x='1501' y='9492'>
+              <zone h='8334' id='11' mode='dropdown' name='What is the Exact Load Time For Views?' param='[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]' type='filter' values='relevant' w='32333' x='1500' y='9444'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='margin-left' value='0' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='8334' id='13' name='What Are The Average Load Times for Views?' param='[Status - Monitor Requests And Users_v2020-3].[none:completed_at:qk]' show-domain='false' show-null-ctrls='false' type='filter' w='32334' x='33833' y='9444'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='8334' id='14' name='What Are The Average Load Times for Views?' param='[Status - Monitor Requests And Users_v2020-3].[avg:elapsed_time (copy):qk]' show-domain='false' show-null-ctrls='false' type='filter' values='relevant' w='32333' x='66167' y='9444'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='margin-right' value='0' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone h='80175' id='16' layout-strategy-id='distribute-evenly' param='horz' type='layout-flow' w='96998' x='1501' y='17825'>
+              <zone h='80222' id='4' name='What Are The Average Load Times for Views?' w='48500' x='1500' y='17778'>
+                <layout-cache minheight='167' minwidth='181' type-h='scalable' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#d4d4d4' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='8' />
+                  <format attr='padding' value='8' />
+                </zone-style>
+              </zone>
+              <zone h='80222' id='8' name='What is the Exact Load Time For Views?' w='48500' x='50000' y='17778'>
+                <layout-cache fixed-size-h='1512' minwidth='446' type-h='fixed' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#d4d4d4' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='8' />
+                  <format attr='padding' value='8' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#d4d4d4' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='margin' value='4' />
+            <format attr='margin-top' value='8' />
+            <format attr='margin-right' value='8' />
+            <format attr='margin-bottom' value='8' />
+            <format attr='margin-left' value='8' />
+            <format attr='padding' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='dashboard' name='Stats for Load Times'>
+      <viewpoints>
+        <viewpoint name='What Are The Average Load Times for Views?'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='What is the Exact Load Time For Views?' />
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' hidden='true' name='What Are The Average Load Times for Views?'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[Status - Monitor Requests And Users_v2020-3].[none:completed_at:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_2611203203455640:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_3471203204218240:qk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_7431203204157460:qk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_8371203203531503:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:completed_at:qk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:created_at:qk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[yr:Calculation_1671205215441463:ok]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[yr:Calculation_3471203204218240:ok]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[yr:Calculation_7431203204157460:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='What is the Exact Load Time For Views?'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[Status - Monitor Requests And Users_v2020-3].[attr:currentsheet:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_2611203203455640:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_3391203205222835:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_3471203204218240:qk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_5531203203614429:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_8251203203722951:ok]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:Calculation_8371203203531503:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:completed_at:qk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:currentsheet:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:http_request_uri:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:name (_sites):nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[none:vizql_session:nk]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[usr:Calculation_0911203203805906:nk:1]</field>
+            <field>[Status - Monitor Requests And Users_v2020-3].[yr:Calculation_7431203204157460:ok]</field>
+            <field>[Status - Start Times For Sessions_v2020-3].[yr:Calculation_9571203204005081:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 3' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='384' name='Stats for Load Times' width='384'>
+      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
+      zJnDSy+9RHd3N9/97neByFItr776Kt3d3dx3331s27aNV155hby8PKZNm4bRaOxX5t5772Xj
+      xo2cOHGCxYsXj6gMgMViobKykry8PGJiYti6dSudnZ2YTCYgss7Rhx9+iNVq5Y477uD5558n
+      JyeHqVOn0tLSgsVi4aOPPmLv3r0AJCQk8P7777NixQreeecdwuEw69evv+pn/uMf/6jVWbVq
+      FS+++CImk4kvfOELAGzfvp34+Hi2b9/OkiVLOHToEAkJCSiKQkJCArNnz+bYsWPaDO777ruP
+      kydP0tvby9y5c4mLi7tqmZuFDAMVYoy4XC6sVivvvvsun/3sZ4c9SXI4HBw+fJi77rpr0Pfd
+      bjd2u33Q9zweDxaLpd9ES7fbjc1mQ6fToaoqHo9nQP3Ly4TDYQKBAFardVRl+s72TSYTTqeT
+      2NhYdDrdoO0Mh8Pa2XRPT4+WChvK3/72Nx566KERf+bL26QoinZFdCVVVXG5XAPa6vf7MRgM
+      GI1GAoEAoVBowO9sJGU+zSQACDHGGhoamDp16rBlWltbSUhIuKk6k6GcOXOGyZMnD7syQDAY
+      pLW1VVZHvcEkAAghRJSSiWBCCBGlJAAIIUSUkgAghBBRSgKAEEJEKQkAQggRpSQACCFElJIA
+      IIQQUUoCgBBCRCkJAEIIEaUkAAghRJSSACCEEFFKAoAQQkQpCQBCCBGlJAAIIUSUkgAghBBR
+      SgKAEEJEKQkAQggRpSQACCFElJIAIIQQUUoCgBBCRCkJAEIIEaWMn6TSmTNnsNvtY90WIYTQ
+      uN1upkyZMmwZ6YuuzScKAHa7nbS0tLFuixBCaNrb269aRvqiayMpICGEiFISAIQQIkpJABBC
+      iCglAUAIIaKUBAAhhIhSEgCEECJKSQAQQogodUMCgKIouFyuG7GrIfX29o7r/kfD5XKhKMon
+      qhcOh69Diwbndru5ePHiDdufENdK+qIIp9MJjFEAuHjxIj/72c8AaG1t5fHHH6e3txdVVfnB
+      D35Aa2srP/7xj6+6nb17945o8sdInD9/noMHD2o//4//8T/GZLs3wlNPPUVnZ+eo6/30pz/l
+      /Pnz2s+XH8+DBw/yq1/9aszaWFlZyVe/+lX++7//e0Tlm5qa+I//+A/t5zfffJPi4mL++Mc/
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
