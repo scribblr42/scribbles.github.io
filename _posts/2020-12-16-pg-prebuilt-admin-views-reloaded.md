@@ -27,35 +27,35 @@ The first thing I did was download the admin views - I downloaded this from a bl
 I wanted to minimise the amount of space these workbooks took & also publish common datasources (like the Audit Tables datasource) as a separate datasource. These are as follows, and the relevant workbooks:
 
 #### Audit Tables
-01. Traffic to Views
-02. Traffic to Datasources
-03. Actions by All Users
-04. Actions by Specific User
-05. Actions by Recent Users
+(01) Traffic to Views
+(02) Traffic to Datasources
+(03) Actions by All Users
+(04) Actions by Specific User
+(05) Actions by Recent Users
 
 #### Background Tasks
-06. Background Tasks for Extracts
-07. Background Tasks for Non-Extracts
-10. Background Task Delays
+(06) Background Tasks for Extracts
+(07) Background Tasks for Non-Extracts
+(10) Background Task Delays
 
 #### Monitor Requests And Users
-08. Stats for Load Times
-11. Performance of Views
+(08) Stats for Load Times
+(11) Performance of Views
 
 #### Resources and Extracts
-09. Stats for Space Usage
+(09) Stats for Space Usage
 
 #### Sessions
-05. Actions by Recent Users
+(05) Actions by Recent Users
 
 #### Start Times For Sessions
-08. Stats for Load Times
+(08) Stats for Load Times
 
 #### View Stats
-09. Stats for Space Usage
+(09) Stats for Space Usage
 
 #### Historical Disk Usage
-12. Server Disk Space
+(12) Server Disk Space
 
 I have each of these datasources published inside a project on my Tableau Server, and each is a Live connection. However, you may want to set these on an extract, and of course please bear in mind that the Tableau Postgres connection will default to 6 months of data unless you have changed it using TSM.
 
