@@ -16,41 +16,45 @@ I've moved jobs over the last 6 months, and in this new role I've taken on the T
 
 Alongside this, I also spent some time to upload the pre-built admin views, and in this process spent time to do a personal makeover of them, and I thought it might be useful for at least one other Server Admin out there to take away this 'starter pack'.
 
+
+**IF YOU JUST WANT THE GOOD STUFF THERE IS A TL;DR AT THE BOTTOM**
+
+
 The reason for the makeover was partially down to aethetic, partially down to the being annoyed by limited filters (no apply button for example) and also being annoyed by the 'range' of the dashboard. Again, these are wholly my own choice, and your mileage may vary.
 
 The first thing I did was download the admin views - I downloaded this from a blog post I posted on [The Information Lab blog](https://www.theinformationlab.co.uk/2019/03/14/project-griffon-admin-views-from-tableau-server/) when I worked there & then took some time to plan out how these should be structured.
 
 I wanted to minimise the amount of space these workbooks took & also publish common datasources (like the Audit Tables datasource) as a separate datasource. These are as follows, and the relevant workbooks:
 
-# Audit Tables
+#### Audit Tables
 01. Traffic to Views
 02. Traffic to Datasources
 03. Actions by All Users
 04. Actions by Specific User
 05. Actions by Recent Users
 
-# Background Tasks
+#### Background Tasks
 06. Background Tasks for Extracts
 07. Background Tasks for Non-Extracts
 10. Background Task Delays
 
-# Monitor Requests And Users
+#### Monitor Requests And Users
 08. Stats for Load Times
 11. Performance of Views
 
-# Resources and Extracts
+#### Resources and Extracts
 09. Stats for Space Usage
 
-# Sessions
+#### Sessions
 05. Actions by Recent Users
 
-# Start Times For Sessions
+#### Start Times For Sessions
 08. Stats for Load Times
 
-# View Stats
+#### View Stats
 09. Stats for Space Usage
 
-# Historical Disk Usage
+#### Historical Disk Usage
 12. Server Disk Space
 
 I have each of these datasources published inside a project on my Tableau Server, and each is a Live connection. However, you may want to set these on an extract, and of course please bear in mind that the Tableau Postgres connection will default to 6 months of data unless you have changed it using TSM.
@@ -61,7 +65,7 @@ Personally, my next step would be to use the above list to plan out (if you are 
 As ever, please swap out the postgres connection details for your own!
 
 
-## 01. Traffic to Views
+#### 01. Traffic to Views
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_serveract.htm) which goes through some example questions you may ask of this chart
 
@@ -72,7 +76,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/01.%20Tr
 ![01 New](/assets/01.%20Traffic%20to%20Views%20Reloaded.png)
 
 
-## 02. Traffic to Datasources
+#### 02. Traffic to Datasources
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_datasources.htm) which goes through some example questions you may ask of this chart
 
@@ -83,7 +87,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/02.%20Tr
 ![02 New](/assets/02.%20Traffic%20to%20Data%20Sources%20Reloaded.png)
 
 
-## 03. Actions by All Users
+#### 03. Actions by All Users
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_users_all.htm) which goes through some example questions you may ask of this chart
 
@@ -94,7 +98,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/03.%20Ac
 ![03 New](/assets/03.%20Actions%20by%20All%20Users%20Reloaded.png)
 
 
-## 04. Actions by Specific Users
+#### 04. Actions by Specific Users
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_user.htm) which goes through some example questions you may ask of this chart
 
@@ -105,7 +109,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/04.%20Ac
 ![04 New](/assets/04.%20Actions%20by%20Specific%20User%20Reloaded.png)
 
 
-## 05. Actions by Recent Users
+#### 05. Actions by Recent Users
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_users_recent.htm) which goes through some example questions you may ask of this chart
 
@@ -116,7 +120,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/05.%20Ac
 ![05 New](/assets/05.%20Actions%20by%20Recent%20Users%20Reloaded.png)
 
 
-## 06. Background Tasks for Extracts
+#### 06. Background Tasks for Extracts
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_backgrnd.htm) which goes through some example questions you may ask of this chart
 
@@ -127,7 +131,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/06.%20Ba
 ![06 New](/assets/06.%20Background%20Tasks%20for%20Extracts%20Reloaded.png)
 
 
-## 07. Background Tasks for Non-Extracts
+#### 07. Background Tasks for Non-Extracts
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_backgrnd_nonextract.htm) which goes through some example questions you may ask of this chart
 
@@ -138,7 +142,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/07.%20Ba
 ![07 New](/assets/07.%20Background%20Tasks%20for%20Non%20Extracts%20Reloaded.png)
 
 
-## 08. Stats for Load Times
+#### 08. Stats for Load Times
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_stats_load_time.htm) which goes through some example questions you may ask of this chart
 
@@ -149,7 +153,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/08.%20St
 ![08 New](/assets/08.%20Stats%20for%20Load%20Times.png)
 
 
-## 09. Stats for Space Usage
+#### 09. Stats for Space Usage
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_space.htm) which goes through some example questions you may ask of this chart
 
@@ -160,7 +164,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/09.%20St
 ![09 New](/assets/09.%20Stats%20for%20Space%20Usage%20Reloaded.png)
 
 
-## 10. Background Task Delay
+#### 10. Background Task Delay
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_background_task_delay.htm) which goes through some example questions you may ask of this chart
 
@@ -171,7 +175,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/10.%20Ba
 ![10 New](/assets/10.%20Background%20Task%20Delays%20Reloaded.png)
 
 
-## 11. Performance of Views
+#### 11. Performance of Views
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_performance_views.htm) which goes through some example questions you may ask of this chart
 
@@ -182,7 +186,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/11.%20Pe
 ![11 New](/assets/11.%20Performance%20of%20Views%20Reloaded.png)
 
 
-12. Server Disk Space
+#### 12. Server Disk Space
 
 To find out more about this view, check out [this](https://help.tableau.com/current/server/en-us/adminview_performance_views.htm) which goes through some example questions you may ask of this chart
 
@@ -194,7 +198,7 @@ You are able to download the reloaded version ![here](/assets/workbooks/12.%20Se
 
 
 ### TL;DR? Links to each of the Workbooks below:
-# Audit Tables
+#### Right click, save as...
 01. Traffic to Views ![here](/assets/workbooks/01.%20Traffic%20to%20Views_v10.5.twb)
 02. Traffic to Datasources ![here](/assets/workbooks/02.%20Traffic%20to%20Data%20Sources_v10.5.twb)
 03. Actions by All Users ![here](/assets/workbooks/03.%20Actions%20by%20All%20Users_v10.5.twb)
