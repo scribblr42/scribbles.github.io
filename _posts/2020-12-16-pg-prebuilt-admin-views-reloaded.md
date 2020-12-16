@@ -73,7 +73,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/01.%20Traffic%20to%20Views_v10.5.twb).
 
-![01 New](/assets/01.%20Traffic%20to%20Views%20Reloaded.png =300px)
+<img src="/assets/01.%20Traffic%20to%20Views%20Reloaded.png" width="400">
 
 
 #### 02. Traffic to Datasources
@@ -84,7 +84,7 @@ To find out more about this view, check out [this](https://help.tableau.com/curr
 
 You are able to download the reloaded version [here](/assets/workbooks/02.%20Traffic%20to%20Data%20Sources_v10.5.twb).
 
-![02 New](/assets/02.%20Traffic%20to%20Data%20Sources%20Reloaded.png =300px)
+<img src="/assets/02.%20Traffic%20to%20Data%20Sources%20Reloaded.png" width="400">
 
 
 #### 03. Actions by All Users
